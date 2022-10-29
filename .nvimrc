@@ -1,4 +1,4 @@
-" (N)Vim Configuration File
+:" (N)Vim Configuration File
 " vim  : place in $HOME/.vimrc
 " nvim : place in $HOME/.config/nvim/init.vim
 " $ ln -s $HOME/.config/nvim/init.vim $HOME/.vimrc
@@ -197,7 +197,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
 " This plugin adds indentation guides to all lines (including empty lines).
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Tabs for vim
 " Tabs, as understood by any other editor.
