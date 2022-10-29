@@ -309,7 +309,7 @@ set background=dark
 " Delete colorscheme line below if using Dark scheme
 
 let g:lightline = {
-      \ 'colorscheme': 'duskfox',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ]
@@ -482,7 +482,7 @@ if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
         set guifont=Source\ Code\ Pro\ for\ Powerline:h15
-        colorscheme duskfox            " set color scheme
+        colorscheme nord            " set color scheme
     endif
 endif
 
