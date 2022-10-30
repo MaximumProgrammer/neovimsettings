@@ -12,7 +12,7 @@ set nocompatible
 " Search recursively downward from CWD; provides TAB completion for filenames
 " e.g., `:find vim* <TAB>`
 set path+=**
-QA
+
 " number of lines at the beginning and end of files checked for file-specific vars
 set modelines=0
 
@@ -118,6 +118,9 @@ call vundle#begin()
 "   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'" Make sure to use single quotes
 " Install with `:PlugInstall`
 
+" https://github.com/VundleVim/Vundle.vim
+Plugin 'VundleVim/Vundle.vim'
+
 " https://github.com/itchyny/lightline.vim
 Plugin 'itchyny/lightline.vim'
 
@@ -184,7 +187,7 @@ Plugin 'EdenEast/nightfox.nvim'
 
 " Tabs for vim
 " Tabs, as understood by any other editor.
-" Plug 'kyazdani42/nvim-web-devicons'
+" Plugin 'kyazdani42/nvim-web-devicons'
 Plugin 'romgrk/barbar.nvim'
 
 " Fast transitions on project files
@@ -227,7 +230,7 @@ Plugin 'irrationalistic/vim-tasks'
 Plugin 'georgejdanforth/vim-clip'                 
 
 " Plugin for having icons
-Plugin 'ryanoasis/vim-devicons'                   
+"Plugin 'ryanoasis/vim-devicons'                   
 
 "-------------------=== Python  ===-----------------------------
 " Syntax checking plugin for Vim
