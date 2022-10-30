@@ -123,7 +123,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'sainnhe/artify.vim'
 Plug 'albertomontesg/lightline-asyncrun' " Integration of https://github.com/skywind3000/asyncrun.vim
 Plug 'rmolin88/pomodoro.vim'
-"Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
@@ -139,6 +139,9 @@ Plug 'APZelos/blamer.nvim'
 
 " https://github.com/fenetikm/falcon/wiki/Installation
 Plug 'fenetikm/falcon'
+
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 
 " https://github.com/macguirerintoul/night_owl_light.vim
 Plug 'macguirerintoul/night_owl_light.vim'
@@ -184,7 +187,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Navigate in the Filesytem with vim
-Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+"Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
 
 " Editorconfig with vim
@@ -339,7 +342,8 @@ let g:lightline = {
       \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+      \    'lineinfo': 'LightlineLineinfo' 
       \ },
       \ 'linter_warnings': 'warning',
       \ 'linter_errors': 'error', 
@@ -347,7 +351,10 @@ let g:lightline = {
       \ 'asyncrun_status': 'lightline#asyncrun#status' 
 \ }
 
-let g:lightline.component_function = { 'lineinfo': 'LightlineLineinfo' }
+let g:lightline.separator = { 'left': "|", 'right': "|" }
+let g:lightline.subseparator = { 'left': "|", 'right': "|" }
+let g:lightline.tabline_separator = { 'left': "|", 'right': "|" }
+let g:lightline.tabline_subseparator = { 'left': "|", 'right': "|" }
 
 function! LightlineLineinfo() abort
     if winwidth(0) < 86
