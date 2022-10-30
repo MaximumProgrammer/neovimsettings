@@ -12,7 +12,7 @@ set nocompatible
 " Search recursively downward from CWD; provides TAB completion for filenames
 " e.g., `:find vim* <TAB>`
 set path+=**
-
+QA
 " number of lines at the beginning and end of files checked for file-specific vars
 set modelines=0
 
@@ -312,12 +312,20 @@ let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+      \    'lineinfo': 'LightlineLineinfo' 
       \ },
-      \ }
+      \ 'linter_warnings': 'warning',
+      \ 'linter_errors': 'error', 
+      \ 'linter_ok': 'custom#lightline#coc_diagnostic_ok',
+      \ 'asyncrun_status': 'lightline#asyncrun#status' 
+\ }
 
 let g:blamer_enabled = 1
 " %a is the day of week, in case it's needed
@@ -959,8 +967,8 @@ let g:startify_custom_footer = s:center(s:footer)
 nnoremap <silent> <buffer> <F9> :call <SID>compile_run_cpp()<CR>
 
 function! s:compile_run_cpp() abort
-  let src_path = expand('%:p:~')
-  let src_noext = expand('%:p:~:r')
+  let src_path = expand('%:p')
+  let src_noext = expand('%:p:r')
   " The building flags
   let _flag = '-Wall -Wextra -std=c++17 -O2'
 
@@ -971,18 +979,9 @@ function! s:compile_run_cpp() abort
   else
     echoerr 'No compiler found!'
   endif
-  call s:create_term_buf('h', 5)
-  execute printf('term %s %s %s -o %s && %s', prog, _flag, src_path, src_noext, src_noext)
-  startinsert
-endfunction
-
-function s:create_term_buf(_type, size) abort
   set splitbelow
   set splitright
-  if a:_type ==# 'v'
-    vnew
-  else
-    new
-  endif
-  execute 'resize ' . a:size
+  execute printf('term %s %s %s -o %s', prog, _flag, src_path, src_noext)
+  execute 'resize ' . 5
+  startinsert
 endfunction
