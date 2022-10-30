@@ -1,4 +1,4 @@
-:" (N)Vim Configuration File
+" (N)Vim Configuration File
 " vim  : place in $HOME/.vimrc
 " nvim : place in $HOME/.config/nvim/init.vim
 " $ ln -s $HOME/.config/nvim/init.vim $HOME/.vimrc
@@ -120,6 +120,10 @@ call plug#begin()
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
+Plug 'sainnhe/artify.vim'
+Plug 'albertomontesg/lightline-asyncrun' " Integration of https://github.com/skywind3000/asyncrun.vim
+Plug 'rmolin88/pomodoro.vim'
+"Plug 'ryanoasis/vim-devicons'
 
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
@@ -180,7 +184,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Navigate in the Filesytem with vim
-"Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
 
 " Editorconfig with vim
@@ -244,7 +248,7 @@ Plug 'irrationalistic/vim-tasks'
 Plug 'georgejdanforth/vim-clip'                 
 
 " Plugin for having icons
-Plug 'ryanoasis/vim-devicons'                   
+"Plug 'ryanoasis/vim-devicons'                   
 
 "-------------------=== Python  ===-----------------------------
 " Syntax checking plugin for Vim
@@ -334,7 +338,24 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
       \ },
-      \ }
+      \ 'linter_warnings': 'warning',
+      \ 'linter_errors': 'error', 
+      \ 'linter_ok': 'custom#lightline#coc_diagnostic_ok',
+      \ 'asyncrun_status': 'lightline#asyncrun#status' 
+\ }
+
+let g:lightline.component_function = { 'lineinfo': 'LightlineLineinfo' }
+
+function! LightlineLineinfo() abort
+    if winwidth(0) < 86
+        return ''
+    endif
+
+    let l:current_line = printf('%-3s', line('.'))
+    let l:max_line = printf('%-3s', line('$'))
+    let l:lineinfo = ' ' . l:current_line . '/' . l:max_line
+    return l:lineinfo
+endfunction
 
 let g:blamer_enabled = 1
 " %a is the day of week, in case it's needed
