@@ -123,7 +123,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'sainnhe/artify.vim'
 Plug 'albertomontesg/lightline-asyncrun' " Integration of https://github.com/skywind3000/asyncrun.vim
 Plug 'rmolin88/pomodoro.vim'
-" Plug 'ryanoasis/vim-devicons'
+
+"https://github.com/ryanoasis/vim-devicons/wiki/screenshots#lightlinevim
+"icons
+Plug 'ryanoasis/vim-devicons'
 
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
@@ -142,6 +145,9 @@ Plug 'fenetikm/falcon'
 
 Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
+
+" https://github.com/sainnhe/icursive-nerd-font
+Plug 'sainnhe/icursive-nerd-font'
 
 " https://github.com/macguirerintoul/night_owl_light.vim
 Plug 'macguirerintoul/night_owl_light.vim'
@@ -331,7 +337,6 @@ set background=dark
 
 " lightline config - add file 'absolutepath'
 " Delete colorscheme line below if using Dark scheme
-
 let g:lightline = {
       \ 'colorscheme': 'duskfox',
       \ 'active': {
@@ -343,18 +348,23 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-      \    'lineinfo': 'LightlineLineinfo' 
+      \   'lineinfo': 'LightlineLineinfo',
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
       \ },
       \ 'linter_warnings': 'warning',
       \ 'linter_errors': 'error', 
       \ 'linter_ok': 'custom#lightline#coc_diagnostic_ok',
-      \ 'asyncrun_status': 'lightline#asyncrun#status' 
+      \ 'asyncrun_status': 'lightline#asyncrun#status',
 \ }
 
-let g:lightline.separator = { 'left': "|", 'right': "|" }
-let g:lightline.subseparator = { 'left': "|", 'right': "|" }
-let g:lightline.tabline_separator = { 'left': "|", 'right': "|" }
-let g:lightline.tabline_subseparator = { 'left': "|", 'right': "|" }
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 function! LightlineLineinfo() abort
     if winwidth(0) < 86
@@ -366,6 +376,11 @@ function! LightlineLineinfo() abort
     let l:lineinfo = ' ' . l:current_line . '/' . l:max_line
     return l:lineinfo
 endfunction
+
+let g:lightline.separator = { 'left': " " , 'right': " "}
+let g:lightline.subseparator = { 'left': "\uf054" , 'right': "\uf053"}
+let g:lightline.tabline_separator = { 'left': ' ' , 'right': ' '}
+let g:lightline.tabline_subseparator = { 'left': "\uf054" , 'right': "\uf053"}
 
 let g:blamer_enabled = 1
 " %a is the day of week, in case it's needed
@@ -475,17 +490,10 @@ set clipboard+=unnamed
 set termguicolors
 
 "=====================================================
-"" ALE Linter
-"=====================================================
-" This belongs to the ALE Linter but should be on the beginning
-
-set completeopt=menu,menuone,preview,noselect,noinsert
-
-"=====================================================
 "" Powerline Settings
 "=====================================================
 
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Hack:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 
@@ -499,8 +507,6 @@ set termencoding=utf-8
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        set guifont=Source\ Code\ Pro\ for\ Powerline:h15
-        colorscheme nord           " set color scheme
     endif
 endif
 
@@ -510,32 +516,6 @@ endif
 " This belongs to the ALE Linter but should be on the beginning
 
 set completeopt=menu,menuone,preview,noselect,noinsert
-
-"=====================================================
-"" Powerline Settings
-"=====================================================
-
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-
-if !has('gui_running')
-  set t_Co=256
-endif
-
-set fillchars+=stl:\ ,stlnc:\
-set termencoding=utf-8
-
-if has("gui_running")
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-        set guifont=Source\ Code\ Pro\ for\ Powerline:h15
-        colorscheme duskfox            " set color scheme
-    endif
-endif
-
-set noshowmode
-set laststatus=2
 
 "=====================================================
 "" TaskManager
