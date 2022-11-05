@@ -256,8 +256,13 @@ Plug 'irrationalistic/vim-tasks'
 " Plugin for copying from selection like html browser
 Plug 'georgejdanforth/vim-clip'                 
 
-" Plugin for having icons
-"Plug 'ryanoasis/vim-devicons'                   
+" Searching files
+" https://github.com/junegunn/fzf.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+"https://github.com/puremourning/vimspector#quick-start 
+Plug 'puremourning/vimspector'
 
 "-------------------=== Python  ===-----------------------------
 " Syntax checking plugin for Vim
