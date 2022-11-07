@@ -10,6 +10,8 @@ https://chmanie.com/post/2020/07/17/modern-c-development-in-neovim/
 
 https://stackoverflow.com/questions/4237817/configuring-vim-for-c
 
+https://www.twilio.com/blog/5-must-have-vim-plugins-that-will-change-your-workflow
+
 Neovim:
 
 https://github.com/junegunn/vim-plug
