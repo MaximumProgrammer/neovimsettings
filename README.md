@@ -6,6 +6,8 @@ https://hannadrehman.com/top-neovim-plugins-for-developers-in-2022
 
 https://console.dev/articles/neovim-best-code-editor-ide-for-developers/
 
+https://chmanie.com/post/2020/07/17/modern-c-development-in-neovim/
+
 Neovim:
 
 https://github.com/junegunn/vim-plug
