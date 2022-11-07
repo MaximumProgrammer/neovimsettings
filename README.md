@@ -12,6 +12,10 @@ https://stackoverflow.com/questions/4237817/configuring-vim-for-c
 
 https://www.twilio.com/blog/5-must-have-vim-plugins-that-will-change-your-workflow
 
+https://github.com/maximbaz/lightline-ale
+
+https://gist.github.com/simonista/8703722
+
 Neovim:
 
 https://github.com/junegunn/vim-plug
