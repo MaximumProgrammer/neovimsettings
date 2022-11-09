@@ -16,6 +16,8 @@ https://github.com/maximbaz/lightline-ale
 
 https://gist.github.com/simonista/8703722
 
+https://opensource.com/article/19/11/vim-plugins
+
 Neovim:
 
 https://github.com/junegunn/vim-plug
