@@ -35,6 +35,14 @@ Vim:
 
 ![image](https://user-images.githubusercontent.com/32228946/198881793-f92cf0ab-d90d-4bf3-9c59-e363d6c7ef48.png)
 
+Current vim
+
+![grafik](https://user-images.githubusercontent.com/32228946/200798305-32f21702-41db-417b-955b-47206baae8fd.png)
+
+![grafik](https://user-images.githubusercontent.com/32228946/200798410-2cb2ed6e-8789-431a-9242-543e522121eb.png)
+
+![grafik](https://user-images.githubusercontent.com/32228946/200798648-80b3853e-713d-4466-903b-ed444676916d.png)
+
 NeoVim:
 
 ![image](https://user-images.githubusercontent.com/32228946/198881817-b9706b94-df76-4f43-a734-676c74ef7af9.png)
