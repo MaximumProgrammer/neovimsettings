@@ -124,6 +124,9 @@ Plugin 'VundleVim/Vundle.vim'
 " https://github.com/itchyny/lightline.vim
 Plugin 'itchyny/lightline.vim'
 
+"https://github.com/maximbaz/lightline-ale
+Plugin 'maximbaz/lightline-ale'
+
 " https://github.com/tpope/vim-commentary
 Plugin 'tpope/vim-commentary'
 
@@ -143,6 +146,7 @@ Plugin 'macguirerintoul/night_owl_light.vim'
 "   - Avoid using standard Vim directory names like 'plugin'
 
 " Make sure you use single quotes
+Plugin 'frazrepo/vim-rainbow'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plugin 'junegunn/vim-easy-align'
@@ -316,10 +320,11 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
-      \ },
+      \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+      \            [ 'lineinfo' ],
+	    \            [ 'percent' ],
+	    \            [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex'] ] }
+      \ ,
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
       \    'lineinfo': 'LightlineLineinfo' 
@@ -329,6 +334,28 @@ let g:lightline = {
       \ 'linter_ok': 'custom#lightline#coc_diagnostic_ok',
       \ 'asyncrun_status': 'lightline#asyncrun#status' 
 \ }
+
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+
+let g:lightline.component_type = {
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+      \ }
+
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_infos = "\uf129"
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
 
 let g:blamer_enabled = 1
 " %a is the day of week, in case it's needed
@@ -621,9 +648,9 @@ let g:clang_complete_patters = 1
 set completeopt=menu,longest
 
 " CentOS
-"let g:clang_library_path = '/opt/rh/llvm-toolset-11.0/root/usr/lib64/libclang.so.11'
+let g:clang_library_path = '/opt/rh/llvm-toolset-11.0/root/usr/lib64/libclang.so.11'
 " Ubuntu
-let g:clang_library_path = '/usr/lib/x86_64-linux-gnu/libclang-14.so.1'
+"let g:clang_library_path = '/usr/lib/x86_64-linux-gnu/libclang-14.so.1'
 let g:clang_auto_user_options='path, .clang_complete'
 let g:clang_snippets_engine = 'clang_complete'
 
