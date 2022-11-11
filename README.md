@@ -39,18 +39,15 @@ Vim:
 
 ![image](https://user-images.githubusercontent.com/32228946/198881793-f92cf0ab-d90d-4bf3-9c59-e363d6c7ef48.png)
 
-Current vim
-
-![grafik](https://user-images.githubusercontent.com/32228946/200798305-32f21702-41db-417b-955b-47206baae8fd.png)
-
-![grafik](https://user-images.githubusercontent.com/32228946/200798410-2cb2ed6e-8789-431a-9242-543e522121eb.png)
-
-![grafik](https://user-images.githubusercontent.com/32228946/200798648-80b3853e-713d-4466-903b-ed444676916d.png)
-
 NeoVim:
 
-![image](https://user-images.githubusercontent.com/32228946/198881817-b9706b94-df76-4f43-a734-676c74ef7af9.png)
+![image](https://user-images.githubusercontent.com/32228946/201434327-0ff3aa89-67b7-4d28-a4a1-663a39a7e1e4.png)
 
-![image](https://user-images.githubusercontent.com/32228946/198881831-c9584c3a-e728-49b4-9412-2fb5d66f2b12.png)
+![image](https://user-images.githubusercontent.com/32228946/201434366-5b251826-fefd-4528-ac0a-e86e670939c9.png)
 
-![image](https://user-images.githubusercontent.com/32228946/198881847-5387ea5c-0b66-4010-8cc9-9cae478d88c0.png)
+![image](https://user-images.githubusercontent.com/32228946/201434487-8b07fdf3-caa9-4cfc-ba24-06a44ff78523.png)
+
+![image](https://user-images.githubusercontent.com/32228946/201434658-dd90fd14-13e3-4f70-9bcf-144739e1f34c.png)
+
+
+
