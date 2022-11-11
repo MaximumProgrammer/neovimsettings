@@ -41,13 +41,12 @@ Vim:
 
 NeoVim:
 
-![image](https://user-images.githubusercontent.com/32228946/201434327-0ff3aa89-67b7-4d28-a4a1-663a39a7e1e4.png)
+![image](https://user-images.githubusercontent.com/32228946/201435674-ec0661c8-91c3-4d9d-a3b2-450a6d7581bb.png)
 
-![image](https://user-images.githubusercontent.com/32228946/201434366-5b251826-fefd-4528-ac0a-e86e670939c9.png)
+![image](https://user-images.githubusercontent.com/32228946/201435699-cdb03f7f-aed5-4d92-bc35-4bc09bcda729.png)
 
-![image](https://user-images.githubusercontent.com/32228946/201434487-8b07fdf3-caa9-4cfc-ba24-06a44ff78523.png)
+![image](https://user-images.githubusercontent.com/32228946/201435733-4aa323f8-5251-4f25-8ff7-e276a38cfae9.png)
 
-![image](https://user-images.githubusercontent.com/32228946/201434658-dd90fd14-13e3-4f70-9bcf-144739e1f34c.png)
 
 
 
