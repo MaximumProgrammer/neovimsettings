@@ -124,6 +124,13 @@ Plug 'sainnhe/artify.vim'
 Plug 'albertomontesg/lightline-asyncrun' " Integration of https://github.com/skywind3000/asyncrun.vim
 Plug 'rmolin88/pomodoro.vim'
 
+
+" https://github.com/maximbaz/lightline-ale
+Plug 'maximbaz/lightline-ale'
+
+" https://github.com/frazrepo/vim-rainbow
+Plug 'frazrepo/vim-rainbow'
+
 "https://github.com/ryanoasis/vim-devicons/wiki/screenshots#lightlinevim
 "icons
 Plug 'ryanoasis/vim-devicons'
@@ -343,25 +350,46 @@ set background=dark
 " lightline config - add file 'absolutepath'
 " Delete colorscheme line below if using Dark scheme
 let g:lightline = {
-      \ 'colorscheme': 'duskfox',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
-      \ },
+      \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+      \            [ 'lineinfo' ],
+	    \            [ 'percent' ],
+	    \            [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex'] ] }
+      \ ,
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-      \   'lineinfo': 'LightlineLineinfo',
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat',
+      \    'lineinfo': 'LightlineLineinfo' 
       \ },
       \ 'linter_warnings': 'warning',
       \ 'linter_errors': 'error', 
       \ 'linter_ok': 'custom#lightline#coc_diagnostic_ok',
-      \ 'asyncrun_status': 'lightline#asyncrun#status',
+      \ 'asyncrun_status': 'lightline#asyncrun#status' 
 \ }
+
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+
+let g:lightline.component_type = {
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+      \ }
+
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_infos = "\uf129"
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
