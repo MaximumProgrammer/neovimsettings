@@ -361,7 +361,9 @@ let g:lightline = {
       \ ,
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-      \    'lineinfo': 'LightlineLineinfo' 
+      \   'lineinfo': 'LightlineLineinfo',
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
       \ },
       \ 'linter_warnings': 'warning',
       \ 'linter_errors': 'error', 
