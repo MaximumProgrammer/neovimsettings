@@ -14,6 +14,8 @@ https://www.twilio.com/blog/5-must-have-vim-plugins-that-will-change-your-workfl
 
 https://github.com/maximbaz/lightline-ale
 
+https://idie.ru/posts/vim-modern-cpp/
+
 https://gist.github.com/simonista/8703722
 
 https://opensource.com/article/19/11/vim-plugins
@@ -21,6 +23,8 @@ https://opensource.com/article/19/11/vim-plugins
 https://github.com/goolord/alpha-nvim/discussions/16
 
 https://alpha2phi.medium.com/neovim-startup-screen-edd933ec8261
+
+https://github.com/octol/vim-cpp-enhanced-highlight
 
 Neovim:
 
