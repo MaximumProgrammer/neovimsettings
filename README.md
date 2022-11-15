@@ -26,6 +26,8 @@ https://alpha2phi.medium.com/neovim-startup-screen-edd933ec8261
 
 https://github.com/octol/vim-cpp-enhanced-highlight
 
+https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-variable-in-vim
+
 Neovim:
 
 https://github.com/junegunn/vim-plug
