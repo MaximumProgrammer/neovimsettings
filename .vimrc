@@ -136,6 +136,9 @@ Plugin 'tpope/vim-vinegar'
 " https://github.com/APZelos/blamer.nvim
 Plugin 'APZelos/blamer.nvim'
 
+" https://github.com/zivyangll/git-blame.vim
+Plugin 'zivyangll/git-blame.vim'
+
 " https://github.com/fenetikm/falcon/wiki/Installation
 Plugin 'fenetikm/falcon'
 
@@ -210,7 +213,8 @@ Plugin 'ervandew/supertab'
 Plugin 'rhysd/vim-clang-format'                   
 
 " Better synatax highlighting
-Plugin 'octol/vim-cpp-enhanced-highlight'         
+"Plugin 'octol/vim-cpp-enhanced-highlight'         
+Plugin 'bfrg/vim-cpp-modern'
 
 " Powerline fonts plugin
 Plugin 'Lokaltog/powerline'                       
@@ -357,10 +361,15 @@ let g:lightline#ale#indicator_warnings = "\uf071"
 let g:lightline#ale#indicator_errors = "\uf05e"
 let g:lightline#ale#indicator_ok = "\uf00c"
 
-let g:blamer_enabled = 1
+"=====================================================
+"" GIT Blamer
+"=====================================================
+
+let g:blamer_enabled = 0
 " %a is the day of week, in case it's needed
 let g:blamer_date_format = '%e %b %Y'
 highlight Blamer guifg=darkorange
+" nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 "=====================================================
 "" Telescope
@@ -1015,3 +1024,6 @@ function! s:compile_run_cpp() abort
   execute 'resize ' . 5
   startinsert
 endfunction
+
+
+set redrawtime=5000
