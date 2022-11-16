@@ -61,6 +61,13 @@ NeoVim:
 
 ![image](https://user-images.githubusercontent.com/32228946/201435733-4aa323f8-5251-4f25-8ff7-e276a38cfae9.png)
 
+TODO LIST: 
+
+Besseres Syntax Highliting 
+CLang funktioniert nicht in großen Projekten 
+VIM Gui schreiben
+Plugins suchen für Vim und Neovim
+
 
 
 
