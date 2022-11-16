@@ -30,12 +30,20 @@ https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-var
 
 Neovim:
 
+#installing neovim
+
 https://github.com/junegunn/vim-plug
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 sudo apt install unifont
+
+
+in blammer
+
+let l:command = 'git -C ' . l:dir_path . ' --no-pager blame ---since=3.weeks -line-porcelain -L ' . a:line_number . ',' . l:end_line . ' -- ' . l:file_path_escaped
+
 
 Vim:
 
