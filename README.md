@@ -42,7 +42,7 @@ sudo apt install unifont
 
 in blammer
 
-let l:command = 'git -C ' . l:dir_path . ' --no-pager blame ---since=3.weeks -line-porcelain -L ' . a:line_number . ',' . l:end_line . ' -- ' . l:file_path_escaped
+let l:command = 'git -C ' . l:dir_path . ' --no-pager blame --since=3.weeks --line-porcelain -L ' . a:line_number . ',' . l:end_line . ' -- ' . l:file_path_escaped
 
 
 Vim:
