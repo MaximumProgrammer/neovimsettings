@@ -28,6 +28,10 @@ https://github.com/octol/vim-cpp-enhanced-highlight
 
 https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-variable-in-vim
 
+Important to read:
+
+https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
+
 Neovim:
 
 #installing neovim
