@@ -32,6 +32,8 @@ Important to read:
 
 https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
 
+https://marcgg.com/blog/2016/03/01/vimrc-example/
+
 Neovim:
 
 #installing neovim
