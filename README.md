@@ -1,6 +1,6 @@
 # neovimsettings
 
-Neovim settings for working with C/C++ and python.
+Why Vim or Neo Vim ?
 
 https://console.dev/articles/neovim-best-code-editor-ide-for-developers/
 
