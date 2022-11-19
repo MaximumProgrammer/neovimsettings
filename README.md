@@ -14,7 +14,9 @@ https://www.twilio.com/blog/5-must-have-vim-plugins-that-will-change-your-workfl
 
 https://opensource.com/article/19/11/vim-plugins
 
-Vim Template
+Vim Template:
+
+https://marcgg.com/blog/2016/03/01/vimrc-example/
 
 https://gist.github.com/simonista/8703722
 
@@ -27,8 +29,6 @@ https://github.com/goolord/alpha-nvim/discussions/16
 Important to read:
 
 https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
-
-https://marcgg.com/blog/2016/03/01/vimrc-example/
 
 https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-variable-in-vim
 
@@ -69,9 +69,3 @@ TODO LIST:
 
 Besseres Syntax Highliting 
 CLang funktioniert nicht in großen Projekten 
-VIM Gui schreiben
-Plugins suchen für Vim und Neovim
-
-
-
-
