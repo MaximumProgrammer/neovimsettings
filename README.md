@@ -2,37 +2,35 @@
 
 Neovim settings for working with C/C++ and python.
 
-https://hannadrehman.com/top-neovim-plugins-for-developers-in-2022
-
 https://console.dev/articles/neovim-best-code-editor-ide-for-developers/
+
+Plugins for VIM
+
+https://hannadrehman.com/top-neovim-plugins-for-developers-in-2022
 
 https://chmanie.com/post/2020/07/17/modern-c-development-in-neovim/
 
-https://stackoverflow.com/questions/4237817/configuring-vim-for-c
-
 https://www.twilio.com/blog/5-must-have-vim-plugins-that-will-change-your-workflow
-
-https://github.com/maximbaz/lightline-ale
-
-https://idie.ru/posts/vim-modern-cpp/
-
-https://gist.github.com/simonista/8703722
 
 https://opensource.com/article/19/11/vim-plugins
 
-https://github.com/goolord/alpha-nvim/discussions/16
+Vim Template
+
+https://gist.github.com/simonista/8703722
+
+Start Up Screens:
 
 https://alpha2phi.medium.com/neovim-startup-screen-edd933ec8261
 
-https://github.com/octol/vim-cpp-enhanced-highlight
-
-https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-variable-in-vim
+https://github.com/goolord/alpha-nvim/discussions/16
 
 Important to read:
 
 https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
 
 https://marcgg.com/blog/2016/03/01/vimrc-example/
+
+https://stackoverflow.com/questions/9616144/how-to-find-all-occurrences-of-a-variable-in-vim
 
 Neovim:
 
