@@ -57,13 +57,23 @@ Vim:
 
 ![image](https://user-images.githubusercontent.com/32228946/198881793-f92cf0ab-d90d-4bf3-9c59-e363d6c7ef48.png)
 
-NeoVim:
+NeoVim (Nord Theme):
 
 ![image](https://user-images.githubusercontent.com/32228946/201435674-ec0661c8-91c3-4d9d-a3b2-450a6d7581bb.png)
 
 ![image](https://user-images.githubusercontent.com/32228946/201435699-cdb03f7f-aed5-4d92-bc35-4bc09bcda729.png)
 
 ![image](https://user-images.githubusercontent.com/32228946/201435733-4aa323f8-5251-4f25-8ff7-e276a38cfae9.png)
+
+Neovim (Norddisk Theme):
+
+![image](https://user-images.githubusercontent.com/32228946/202894974-95288655-dc70-4098-93be-7821877e6fdd.png)
+
+![image](https://user-images.githubusercontent.com/32228946/202894989-f5e4db23-b03d-4494-808f-3b4a8557dee8.png)
+
+![image](https://user-images.githubusercontent.com/32228946/202895008-fde82892-f6a7-4db2-ab99-5191dc723bca.png)
+
+
 
 TODO LIST: 
 
