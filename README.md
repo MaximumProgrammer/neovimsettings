@@ -74,6 +74,28 @@ Neovim (Norddisk Theme):
 ![image](https://user-images.githubusercontent.com/32228946/202895008-fde82892-f6a7-4db2-ab99-5191dc723bca.png)
 
 
+Important:
+
+https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
+
+export GIT_EDITOR="vim -u NONE"
+
+.gitconfig
+
+ 1 [user]
+  2   name = Markus Gruber
+  3   email = markus.gruber@mindbreeze.com
+  4 [pull]
+  5   rebase = true
+  6 [merge]
+  7   ff = no
+  8   commit = no
+  9 [core]
+ 10   longpaths = true
+ 11   autocrlf = false
+ 12   editor = 'vim -u NONE'
+ 13 [diff]
+ 14   tool = vimdiff
 
 TODO LIST: 
 
