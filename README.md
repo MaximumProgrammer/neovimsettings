@@ -97,6 +97,10 @@ export GIT_EDITOR="vim -u NONE"
  13 [diff]
  14   tool = vimdiff
 
+Start Up Screens
+
+https://alpha2phi.medium.com/neovim-startup-screen-edd933ec8261
+
 TODO LIST: 
 
 Besseres Syntax Highliting 
