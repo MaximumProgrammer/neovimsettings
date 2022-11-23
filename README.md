@@ -94,9 +94,39 @@ https://gist.github.com/w0ng/7e3f41b75c50fa3eb984
 For .bashrc:
 
 ```
-export GIT_EDITOR="vim -u ~/.my-custom-vimrc"
 
-export GIT_EDITOR="vim -u NONE"
+# .bashrc
+  2
+  3 # Source global definitions
+  4 if [ -f /etc/bashrc ]; then
+  5   . /etc/bashrc
+  6 fi
+  7
+  
+ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+          export TERM='xterm-256color'
+ else
+          export TERM='xterm-color'
+ fi
+
+ alias COMPILE_D='./build.sh Debug Ninja gcc'
+ alias COMPILE_R='./build.sh Release Ninja gcc'
+ 
+ function build_cscope_db_func() {
+      find . -name '*.c' -o -name '*.h'  > cscope.files
+      cscope -Rbkq cscope.files
+ }
+ 
+ alias csbuild=build_cscope_db_func
+ 
+ alias gdc='git diff --color=always | less -RN'
+ 
+ export LATEST_JAVA_HOME=/usr/java/latest
+ 
+ export JAVA_HOME="${LATEST_JAVA_HOME}"
+
+ export GIT_EDITOR="vim -u ~/.my-custom-vimrc"
+
 ```
 
 for .gitconfig:
