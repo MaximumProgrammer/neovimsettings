@@ -1,0 +1,14 @@
+ [user]
+     name = Markus Gruber
+     email = markus.gruber@mindbreeze.com
+ [pull]
+   rebase = true
+ [merge]
+    ff = no
+    commit = no
+ [core]
+    longpaths = true
+    autocrlf = false
+    editor = 'vim -u ~/.my-custom-vimrc'
+ [diff]
+    tool = vimdiff
