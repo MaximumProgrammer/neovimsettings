@@ -95,7 +95,7 @@ For .bashrc:
 
 export GIT_EDITOR="vim -u ~/.my-custom-vimrc"
 
-# export GIT_EDITOR="vim -u NONE"
+"export GIT_EDITOR="vim -u NONE"
 
 for .gitconfig:
 
