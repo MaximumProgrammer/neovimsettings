@@ -78,25 +78,6 @@ Important:
 
 https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages
 
-export GIT_EDITOR="vim -u NONE"
-
-.gitconfig
-
- 1 [user]
-  2   name = Markus Gruber
-  3   email = markus.gruber@mindbreeze.com
-  4 [pull]
-  5   rebase = true
-  6 [merge]
-  7   ff = no
-  8   commit = no
-  9 [core]
- 10   longpaths = true
- 11   autocrlf = false
- 12   editor = 'vim -u NONE'
- 13 [diff]
- 14   tool = vimdiff
-
 Start Up Screens
 
 https://alpha2phi.medium.com/neovim-startup-screen-edd933ec8261
@@ -109,3 +90,28 @@ CLang funktioniert nicht in großen Projekten
 Vim with no Plugins: 
 
 https://gist.github.com/w0ng/7e3f41b75c50fa3eb984
+
+For .bashrc:
+
+export GIT_EDITOR="vim -u ~/.my-custom-vimrc"
+
+# export GIT_EDITOR="vim -u NONE"
+
+for .gitconfig:
+
+[user]
+ name = Markus Gruber
+ email = markus.gruber@mindbreeze.com
+[pull]
+ rebase = true
+[merge]
+  ff = no
+  commit = no
+[core]
+  longpaths = true
+  autocrlf = false
+  editor = 'vim -u ~/.my-custom-vimrE'
+[diff]
+  tool = gdc
+
+
