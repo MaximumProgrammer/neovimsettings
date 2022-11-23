@@ -93,12 +93,15 @@ https://gist.github.com/w0ng/7e3f41b75c50fa3eb984
 
 For .bashrc:
 
+```
 export GIT_EDITOR="vim -u ~/.my-custom-vimrc"
 
 export GIT_EDITOR="vim -u NONE"
+```
 
 for .gitconfig:
 
+```
 [user]
  name = Markus Gruber
  email = markus.gruber@mindbreeze.com
@@ -113,9 +116,11 @@ for .gitconfig:
   editor = 'vim -u ~/.my-custom-vimrE'
 [diff]
   tool = gdc
+```
 
-My without Plugins:
+My vim without plugins:
 
+```
 "
 " ~/.vimrc
 "
@@ -179,4 +184,4 @@ set background=dark
 if &diff
     set diffopt=filler,foldcolumn:0
 endif
-
+```
