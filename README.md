@@ -105,3 +105,7 @@ TODO LIST:
 
 Besseres Syntax Highliting 
 CLang funktioniert nicht in großen Projekten 
+
+Vim with no Plugins: 
+
+https://gist.github.com/w0ng/7e3f41b75c50fa3eb984
