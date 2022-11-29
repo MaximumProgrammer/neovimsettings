@@ -218,7 +218,7 @@ endif
 
 TODO: Checck shortkey binding F3,F4,F5 and so on.
 
+https://stackoverflow.com/questions/27906004/differences-when-using-grep-in-terminal-and-grep-in-vim
+
 " Grep settings
 set grepprg=grep\ -n\ $*
-
-https://stackoverflow.com/questions/27906004/differences-when-using-grep-in-terminal-and-grep-in-vim
