@@ -225,6 +225,7 @@ Grep:
 
 https://dev.to/iggredible/vimgrep-tips-and-tricks-54pl
 https://stackoverflow.com/questions/27906004/differences-when-using-grep-in-terminal-and-grep-in-vim
+https://sparkbox.com/foundry/demystifying_multi_file_searches_in_vim_and_the_command_line
 
 " Grep settings
 set grepprg=grep\ -n\ $*
@@ -232,5 +233,3 @@ set grepprg=grep\ -n\ $*
 Tabs: 
 
 https://webdevetc.com/blog/tabs-in-vim/
-
-
