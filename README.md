@@ -233,3 +233,5 @@ set grepprg=grep\ -n\ $*
 Tabs: 
 
 https://webdevetc.com/blog/tabs-in-vim/
+
+set mouse=a
