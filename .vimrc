@@ -151,6 +151,8 @@ Plugin 'macguirerintoul/night_owl_light.vim'
 " Make sure you use single quotes
 Plugin 'frazrepo/vim-rainbow'
 
+Plugin 'tomasr/molokai'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plugin 'junegunn/vim-easy-align'
 
@@ -213,8 +215,8 @@ Plugin 'ervandew/supertab'
 Plugin 'rhysd/vim-clang-format'                   
 
 " Better synatax highlighting
-"Plugin 'octol/vim-cpp-enhanced-highlight'         
-Plugin 'bfrg/vim-cpp-modern'
+Plugin 'octol/vim-cpp-enhanced-highlight'         
+" Plugin 'bfrg/vim-cpp-modern'
 
 " Powerline fonts plugin
 Plugin 'Lokaltog/powerline'                       
@@ -305,6 +307,8 @@ Plugin 'arcticicestudio/nord-vim'
 
 "Start Up Screen"
 Plugin 'mhinz/vim-startify'
+
+Plugin 'vim-scripts/SwitchExt'
 
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call vundle#end()
@@ -1028,6 +1032,9 @@ endfunction
 
 set redrawtime=5000
 
+set filetype=on
+set syntax=on
+
 " Disable function highlighting (affects both C and C++ files)
 let g:cpp_function_highlight = 1
 
@@ -1040,3 +1047,37 @@ let g:cpp_member_highlight = 1
 " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
 " (affects both C and C++ files)
 let g:cpp_simple_highlight = 1
+
+let g:cpp_class_scope_highlight = 1
+
+let g:cpp_member_variable_highlight = 1
+
+let g:cpp_class_decl_highlight = 1
+
+let g:cpp_posix_standard = 1
+
+let g:cpp_experimental_simple_template_highlight = 1
+
+let g:nord_uniform_status_lines = 1
+
+let g:nord_bold_vertical_split_line = 1
+
+let g:nord_cursor_line_number_background = 1
+
+let g:nord_uniform_diff_background = 1
+
+"=====================================================
+"" Switch between Header and Source File
+"=====================================================
+
+map <F3> <ESC>:call SwitchExt()<CR>
+
+"=====================================================
+"" Shortkeys for Tabs
+"=====================================================
+
+map <leader>tn :tabnew<cr>
+map <leader>t<leader> :tabnext
+map <leader>tm :tabmove
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
