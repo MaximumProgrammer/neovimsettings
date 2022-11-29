@@ -215,3 +215,6 @@ if &diff
     set diffopt=filler,foldcolumn:0
 endif
 ```
+
+TODO: Checck shortkey binding F3,F4,F5 and so on.
+
