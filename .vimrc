@@ -22,6 +22,9 @@ set autoread
 " http://stackoverflow.com/questions/2490227/how-does-vims-autoread-work#20418591
 au FocusGained,BufEnter * :silent! !
 
+" Grep settings
+set grepprg=grep\ -n\ $*
+
 " use Unicode
 set encoding=utf-8
 
@@ -65,6 +68,9 @@ set ttyfast lazyredraw
 
 " highlight matching parens, braces, brackets, etc
 set showmatch
+
+" Moving withthe mouse
+" set mouse=a
 
 " http://vim.wikia.com/wiki/Searching
 set hlsearch incsearch ignorecase smartcase
@@ -141,6 +147,9 @@ Plugin 'zivyangll/git-blame.vim'
 
 " https://github.com/fenetikm/falcon/wiki/Installation
 Plugin 'fenetikm/falcon'
+
+" https://github.com/romainl/vim-qf
+Plugin  'romainl/vim-qf'
 
 " https://github.com/macguirerintoul/night_owl_light.vim
 Plugin 'macguirerintoul/night_owl_light.vim'
@@ -304,10 +313,12 @@ Plugin 'deoplete-plugins/deoplete-jedi'           " Using deoplete with vim
 
 " Nord Color Scheme
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'kamwitsta/nordisk'
 
 "Start Up Screen"
 Plugin 'mhinz/vim-startify'
 
+" For switching between source and header files
 Plugin 'vim-scripts/SwitchExt'
 
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -324,7 +335,7 @@ set background=dark
 " Delete colorscheme line below if using Dark scheme
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'nordisk',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ],
