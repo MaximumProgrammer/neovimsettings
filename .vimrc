@@ -162,6 +162,9 @@ Plugin 'frazrepo/vim-rainbow'
 
 Plugin 'tomasr/molokai'
 
+" TagClist "
+Plugin 'yegappan/taglist'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plugin 'junegunn/vim-easy-align'
 
