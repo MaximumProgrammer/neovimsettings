@@ -48,6 +48,8 @@ set novisualbell
 "set relativenumber 
 set number 
 
+set shell=/bin/sh
+
 " number of lines offset when jumping
 set scrolloff=2
 
@@ -629,7 +631,7 @@ let g:pymode_breakpoint_key='<leader>b'
 "" Syntastic Settings
 "=====================================================
 
-let g:syntastic_python_checkers = ['flake8', 'pylint', 'mypy']
+let g:syntastic_python_checkers = ['flake8']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -660,7 +662,6 @@ let g:syntastic_error_symbol='X'
 let g:syntastic_style_error_symbol='X'
 let g:syntastic_warning_symbol='x'
 let g:syntastic_style_warning_symbol='x'
-let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python']
 
 "=====================================================
 "" C++ Clang Completion
