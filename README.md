@@ -235,3 +235,5 @@ Tabs:
 https://webdevetc.com/blog/tabs-in-vim/
 
 set mouse=a
+
+https://gist.github.com/derwiki/1385060/bdc301a02e20382def3257116a63828232a69391
