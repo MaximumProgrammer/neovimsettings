@@ -100,5 +100,7 @@
   ri = rebase --interactive
   # perform an interactive rebase from a given commitish
 
-  fresh = !git fetch --all && git reset --hard origin/master -
+  fresh = !git checkout master && git fetch --all && git reset --hard origin/master
   # fetch from all remotes and reset to origin/master
+  
+  re = !git reset --hard origin/master 
