@@ -1,4 +1,5 @@
 " (N)Vim Configuration File
+" Especially for vim
 " vim  : place in $HOME/.vimrc
 " nvim : place in $HOME/.config/nvim/init.vim
 " $ ln -s $HOME/.config/nvim/init.vim $HOME/.vimrc
