@@ -1,6 +1,6 @@
 [user]
 	name = Markus Gruber
-	email = markus.gruber@mindbreeze.com
+	email = markus.gruber@gmx.net
 
 [log]
     decorate = short
@@ -34,6 +34,10 @@
 	tool = vimdiff
 
 [alias]
+  #for adding files and formating
+  pretty = git add -u && git-clang-format && git add -u
+  #for showing files
+  files = git diff --name-only master...
   st = status
   ci = commit
   co = checkout
